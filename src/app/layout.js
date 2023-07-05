@@ -1,3 +1,5 @@
+import Footer from './component/Footer'
+import Header from './component/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -10,8 +12,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='bg-gray-800'>
+      
+      <body className={inter.className}>
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+        </body>
     </html>
   )
 }
